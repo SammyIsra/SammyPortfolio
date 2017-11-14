@@ -46,7 +46,7 @@ const Title = styled.div`
 `;
 
 const Subtitle = styled.div`
-  font-size: 1.25rem;
+  font-size: 1.7rem;
   text-decoration: none;
   color: ${ props => props.dark ? "white" : "black"};
 `;
