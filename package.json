@@ -8,7 +8,9 @@
     "gatsby-link": "^1.6.27",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-styled-components": "2.0.2",
-    "styled-components": "2.2.3"
+    "gatsby-plugin-typography": "1.7.10",
+    "styled-components": "2.2.3",
+    "typography-theme-fairy-gates": "0.15.11"
   },
   "keywords": [
     "gatsby",
@@ -20,9 +22,10 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:demo": "gatsby build&&surge ./public/ --domain sammyis-gdemo.surge.sh"
   },
   "devDependencies": {
     "eslint": "4.11.0",
