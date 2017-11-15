@@ -10,7 +10,11 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  ${ props => props.image 
+    ? "background-image: url('"+ props.image.large +"');"
+    : ""}
 `;
+  // background-image: ${props => `url("${props.image})` || "none"};
 
 const HeaderMask = styled.div`
   margin-left: 0;
@@ -31,6 +35,7 @@ const HeaderMask = styled.div`
 const Title = styled.div`
   margin: 2% auto;
   text-transform: uppercase;
+  text-align: center;
   padding: 2px 10px 0px 10px;
   margin: 20px;
   font-size: 4.5rem;
@@ -51,17 +56,57 @@ const Subtitle = styled.div`
   color: ${ props => props.dark ? "white" : "black"};
 `;
 
-export default function Header({dark}){
+const SubtitleItem = styled.span`
+  color: inherit;
+  text-decoration: inherit;
+  background-image: none;
+`;
+
+export default function Header({dark, useImage, page}){
+
+  const bgImages = {
+    photographer: [
+      {
+        large: "https://c1.staticflickr.com/5/4164/33673946114_a8021829e8_h.jpg",
+        medium: "https://c1.staticflickr.com/5/4164/33673946114_3aedbaedf2_b.jpg",
+        small: "https://c1.staticflickr.com/5/4164/33673946114_3aedbaedf2_c.jpg"
+      },
+      {
+        large: "https://c2.staticflickr.com/6/5622/30348760064_f21efb6115_h.jpg",
+        medium: "https://c2.staticflickr.com/6/5622/30348760064_275a99d1c9_b.jpg",
+        small: "https://c2.staticflickr.com/6/5622/30348760064_275a99d1c9_c.jpg"
+      },
+      {
+        large: "https://c2.staticflickr.com/8/7301/27003100350_47e097bd83_h.jpg",
+        medium: "https://c2.staticflickr.com/8/7301/27003100350_1c36f9bb9e_b.jpg",
+        small: "https://c2.staticflickr.com/8/7301/27003100350_1c36f9bb9e_c.jpg"
+      }
+    ],
+    developer: [],
+    home: []
+  };
+
+  function getImage(){
+    if(useImage)
+      return bgImages[page][Math.floor(Math.random()*bgImages[page].length)];
+    else 
+      return undefined;
+  }
+
   return(
-    <HeaderContainer>
+    <HeaderContainer image={getImage()} className="Header">
       <HeaderMask dark={dark}>
         <Link to="/">
           <Title dark={dark}>Sammy Israwi</Title>
         </Link>
         <Subtitle dark={dark}>
-          <Link to='/developer'>DEVELOPER</Link>
+          <Link to='/developer'>
+            DEVELOPER
+          </Link>
           &nbsp;|&nbsp; 
-          <Link to='/photographer'>PHOTOGRAPHER</Link>
+          <Link to='/photographer'>
+            PHOTOGRAPHER
+          </Link>
         </Subtitle>
       </HeaderMask>
     </HeaderContainer>

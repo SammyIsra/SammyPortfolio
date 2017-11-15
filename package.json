@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Sammy Israwi <sammy.israwi@gmail.com>",
   "dependencies": {
+    "axios": "0.17.1",
     "gatsby": "^1.9.110",
     "gatsby-link": "^1.6.27",
     "gatsby-plugin-react-helmet": "^1.0.8",

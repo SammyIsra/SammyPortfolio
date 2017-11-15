@@ -50,10 +50,10 @@ const Footer = () =>
   <div>
     Made proudly by Sammy
     <FooterIconsContainer>
-      <FooterIconItem>Flickr</FooterIconItem>
-      <FooterIconItem>Instagram</FooterIconItem>
-      <FooterIconItem>Dev.to</FooterIconItem>
-      <FooterIconItem>Github</FooterIconItem>
+      <FooterIconItem><a href="https://www.flickr.com/photos/sammy_iy/">Flickr</a></FooterIconItem>
+      <FooterIconItem><a href="https://www.linkedin.com/in/sammyisrawi/">LinkedIn</a></FooterIconItem>
+      <FooterIconItem><a href="https://dev.to/sammyisa">Dev.to</a></FooterIconItem>
+      <FooterIconItem><a href="https://github.com/SammyIsra">Github</a></FooterIconItem>
     </FooterIconsContainer>
   </div>;
   
@@ -63,8 +63,8 @@ const TemplateWrapper = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: "description", content: "Personal website and portfolio" },
-        { name: "keywords", content: "sample, something" },
+        { name: "description", content: data.site.siteMetadata.description },
+        { name: "keywords", content: data.site.siteMetadata.tags.join(", ") },
       ]}
     />
     {children()}
@@ -82,7 +82,9 @@ export const query = graphql`
   query IndexLayoutQuery {
     site {
       siteMetadata {
-        title
+        title,
+        description,
+        tags
       }
     }
   }
