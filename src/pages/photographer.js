@@ -8,19 +8,29 @@ import Header from "../components/Header";
 
 function PhotographerPage({data}){
   const photos = data.allFlickrImageList.edges.map( x => x.node );
-  console.log(photos);
-  //const images = PhotographerPageQuery.edges.node;
+  const bioText = "Even tho I am a develoepr by trade, I have an intense passion for photography. " +
+  "My main subject is always people, which is why I enjoy portrait photography over any other. " +
+  "That doesn't mean that I don't enjoy other kinds of photography! "+
+  "I'm all for trying new styles and formats, you never know what your next passion will be.";
   return (
-    <div>
+    <PhotographerBody>
       <Header dark useImage page="photographer" />
-      <div>
-        <PhotoStream photos={photos} />
-      </div>
-    </div>
+      
+      <Bio>
+        <BioTitle>Sammy is a... Photographer</BioTitle>
+        <BioBody>{bioText}</BioBody>
+      </Bio>
+      <PhotoStream photos={photos} />
+      
+    </PhotographerBody>
   );
 }
 
 export default PhotographerPage;
+
+const PhotographerBody = styled.div`
+  background-color: rgb(51,51,51);
+`;
 
 
 const PhotoStreamContainer = styled.div`
@@ -49,6 +59,27 @@ const PhotoItem = styled.img`
     opacity: 0.8;
   }
 `;
+
+const Bio = styled.div`
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const BioTitle = styled.h2`
+  color: rgb(255, 204, 0);
+  font-size: 3rem;
+  line-height: 3rem;
+`;
+
+const BioBody = styled.p`
+  color: white;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+`;
+
+
 
 function PhotoStream({photos}){
   return (
