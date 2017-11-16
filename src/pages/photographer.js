@@ -55,8 +55,10 @@ const PhotoItem = styled.img`
   width: 100%;
   opacity: 1;
   margin-bottom: 0;
+  background-color: white;
+  transition: opacity 0.5s;
   &:hover{
-    opacity: 0.8;
+    opacity: 0.75;
   }
 `;
 
