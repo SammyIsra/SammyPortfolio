@@ -82,7 +82,6 @@ const BioBody = styled.p`
 `;
 
 
-
 function PhotoStream({photos}){
   return (
     <PhotoStreamContainer>
