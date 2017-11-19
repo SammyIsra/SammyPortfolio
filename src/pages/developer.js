@@ -5,14 +5,9 @@ import Header from "../components/Header";
 
 const DeveloperPage = ({data}) => {
 
-  data.allMarkdownRemark.edges
-    .forEach( edge => console.log(edge.node) );
-
   const posts = data.allMarkdownRemark.edges
     .map( edge => edge.node )
     .filter( post => post.frontmatter.published );
-
-  //posts.forEach(post => console.log(post.frontmatter));
 
   return (
     <div>
