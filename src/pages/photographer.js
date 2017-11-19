@@ -8,7 +8,7 @@ import Header from "../components/Header";
 
 function PhotographerPage({data}){
   const photos = data.allFlickrImageList.edges.map( x => x.node );
-  const bioText = "Even tho I am a develoepr by trade, I have an intense passion for photography. " +
+  const bioText = "Even though I am a developer by trade, I have an intense passion for photography. " +
   "My main subject is always people, which is why I enjoy portrait photography over any other. " +
   "That doesn't mean that I don't enjoy other kinds of photography! "+
   "I'm all for trying new styles and formats, you never know what your next passion will be.";

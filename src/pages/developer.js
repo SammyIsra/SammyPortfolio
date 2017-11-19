@@ -72,7 +72,7 @@ const PostType = styled.span`
   line-height: 1.75rem;
   font-size: 1.75rem;
   margin-bottom: 0;
-  &::before{
+  &:before{
     content: '#';
     color: rgb(204, 204, 204);
     font-weight: 300;

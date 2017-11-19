@@ -62,6 +62,13 @@ const SubtitleItem = styled.span`
   background-image: none;
 `;
 
+const ArrowDown = styled.div`
+  font-weight: 500;
+  color: ${ props => props.dark ? "white" : "black"};
+  position: absolute;
+  bottom: 7px;
+`;
+
 export default function Header({dark, useImage, page}){
 
   const bgImages = {
@@ -108,6 +115,7 @@ export default function Header({dark, useImage, page}){
             PHOTOGRAPHER
           </Link>
         </Subtitle>
+        <ArrowDown dark={dark}>V</ArrowDown>
       </HeaderMask>
     </HeaderContainer>
   ); 
