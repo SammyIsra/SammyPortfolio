@@ -4,9 +4,15 @@ import styled from "styled-components";
 import Header from "../components/Header";
 
 const DeveloperPage = ({data}) => {
+
+  data.allMarkdownRemark.edges
+    .forEach( edge => console.log(edge.node) );
+
   const posts = data.allMarkdownRemark.edges
     .map( edge => edge.node )
     .filter( post => post.frontmatter.published );
+
+  //posts.forEach(post => console.log(post.frontmatter));
 
   return (
     <div>
@@ -26,8 +32,10 @@ class Experiences extends React.Component{
     return (
       <ExperiencesContainer>
         <ExperiencesTitle>Experiences:</ExperiencesTitle>
+        <hr/>
         {posts.map((post) => 
           <DeveloperPost 
+            key={post.frontmatter.title}
             title={post.frontmatter.title}
             description={post.frontmatter.description}
             timeToRead={post.timeToRead}
@@ -88,10 +96,10 @@ const ExperiencesContainer = styled.div`
   align-items: stretch;
 `;
 
-const ExperiencesTitle = styled.h2`
-  font-size: 2rem;
-  line-height: 2rem;
-  margin-bottom: 2rem;
+const ExperiencesTitle = styled.h3`
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  margin-bottom: 1.3rem;
 `;
 
 export default DeveloperPage;

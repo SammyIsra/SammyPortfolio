@@ -67,6 +67,8 @@ const ArrowDown = styled.div`
   color: ${ props => props.dark ? "white" : "black"};
   position: absolute;
   bottom: 7px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export default function Header({dark, useImage, page}){
