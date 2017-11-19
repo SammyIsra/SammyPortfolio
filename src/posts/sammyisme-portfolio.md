@@ -1,12 +1,14 @@
 ---
-title: Portfolio - GatsbyJS
+title: SammyIsA - Personal Portfolio 
 date: "2017-11-17"
-projectDate: 
+description: Portfolio website for myself as a developer and photographer, built on GatsbyJS.
+type: project
+published: true
 ---
-# What it is
+## What it is
 This is my personal website and portfolio, it shows my work on development and photography and a means to contact me. 
 
-# What I used
+## What I used
 The website is built with GatsbyJS and hosted in Surge. React was used for structuring components and the pages. JavaScript all around. 
 
 The posts are not hosted anywhere in particular. I realized that for Gatsby, making the posts Markdown files on the project was probably the easiest solution. I use Typora to edit the files.
