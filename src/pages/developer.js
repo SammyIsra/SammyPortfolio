@@ -11,7 +11,7 @@ const DeveloperPage = ({data}) => {
 
   return (
     <div>
-      <Header dark/>
+      <Header light/>
       <Experiences posts={posts} />
     </div>
   );
@@ -53,23 +53,31 @@ class Experiences extends React.Component{
         <hr/>
         {filteredPosts.map((post) => 
           <DeveloperPost 
-            key={post.frontmatter.title}
+            key={post.fields.slug}
             title={post.frontmatter.title}
             description={post.frontmatter.description}
             timeToRead={post.timeToRead}
-            type={post.frontmatter.type} />)}
+            type={post.frontmatter.type} 
+            location={post.fields.slug} />)}
       </ExperiencesContainer>
     );
   }
 }
 
-function DeveloperPost({title, description, type}) {
+function DeveloperPost({title, description, type, location}) {
   return (
-    <PostContainer>
-      <PostTitle>{title}</PostTitle>&nbsp;
-      <PostType>{type}</PostType>
-      <PostDescription>{description}</PostDescription>
-    </PostContainer>
+    <Link 
+      to={location}
+      style={{ 
+        textDecoration: "none", 
+        color: "inherit",
+        backgroundImage: "inherit" }}>
+      <PostContainer>
+        <PostTitle>{title}</PostTitle>&nbsp;
+        <PostType>{type}</PostType>
+        <PostDescription>{description}</PostDescription>
+      </PostContainer>
+    </Link>
   );
 }
 
@@ -201,8 +209,9 @@ export const query = graphql`
             type
             published
           }
-          timeToRead
-          html
+          fields { 
+            slug
+          }
         }
       }
     }

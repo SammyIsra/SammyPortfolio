@@ -12,6 +12,7 @@
     "gatsby-plugin-typography": "1.7.10",
     "gatsby-source-filesystem": "1.5.8",
     "gatsby-transformer-remark": "1.7.21",
+    "moment": "2.19.2",
     "styled-components": "2.2.3",
     "typography-theme-fairy-gates": "0.15.11"
   },

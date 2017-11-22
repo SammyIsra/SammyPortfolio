@@ -7,7 +7,7 @@ import Header from "../components/Header";
 //import bgImage from "../assets/title-background.jpg";
 
 function PhotographerPage({data}){
-  const photos = data.allFlickrImageList.edges.map( x => x.node );
+  const photos = data.allFlickrImage.edges.map( x => x.node );
   const bioText = "Even though I am a developer by trade, I have an intense passion for photography. " +
   "My main subject is always people, which is why I enjoy portrait photography over any other. " +
   "That doesn't mean that I don't enjoy other kinds of photography! "+
@@ -97,7 +97,7 @@ function PhotoStream({photos}){
 
 export const query = graphql`
   query PhotographerPageQuery {
-    allFlickrImageList {
+    allFlickrImage {
       edges{
         node {
           title
