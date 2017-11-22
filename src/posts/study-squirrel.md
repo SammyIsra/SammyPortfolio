@@ -3,7 +3,7 @@ title: Study Squirrel
 type: project
 description: Mobile application that allows student to find and join study groups in their campus, built on Ionic. 
 published: true
-date: 2016-12-05
+date: "2016-12-01"
 ---
 ## What it is
 Mobile application developed on Ionic that allows students to schedule and find study sessions in their campus.

@@ -3,6 +3,7 @@ title: React Photostream
 description: React package that allows the display of multiple images in a wall without any space between them.
 type: project
 published: true
+date: "2017-06-01"
 github: https://github.com/SammyIsra/photostream-react
 ---
 

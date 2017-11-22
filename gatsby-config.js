@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Sammy's Website",
-    description: " ☄️Sammy's website and portfolio!\nFrom Development to Photography",
+    title: "Sammy is a...",
+    description: "☄️Sammy's website and portfolio!\nFrom Development to Photography",
     tags: ["portfolio", "software developer", "developer", "photographer"]
   },
   plugins: [

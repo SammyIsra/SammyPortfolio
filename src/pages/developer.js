@@ -199,7 +199,9 @@ export default DeveloperPage;
 
 export const query = graphql`
   query PostsData {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order: DESC}
+    ){
       edges {
         node {
           frontmatter {

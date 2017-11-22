@@ -2,6 +2,7 @@
 title: Fred
 description: Chatbot built from Hubot for a personal chatroom. Built with JavaScript. 
 type: project
+date: "2017-10-01"
 published: true
 github: https://github.com/SammyIsra/fred
 ---

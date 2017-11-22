@@ -1,6 +1,6 @@
 ---
 title: SammyIsA - Personal Portfolio 
-date: "2017-11-17"
+date: "2017-11-21"
 description: Portfolio website for myself as a developer and photographer, built on GatsbyJS.
 type: project
 published: true

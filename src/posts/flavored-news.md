@@ -3,6 +3,7 @@ title: Flavored News
 description: Websites that displays news from notable outlets and separates them by general mood.
 type: project
 published: true
+date: "2016-09-01"
 devpost: https://devpost.com/software/lacodinggranja_2016
 ---
 
