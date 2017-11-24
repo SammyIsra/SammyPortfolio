@@ -35,7 +35,7 @@ function DeveloperBio(){
       <BioBody>
         {bio}<br />
         I also write sometimes in <a href="https://dev.to/sammyisa">Dev.to</a> and ramble on <a href="https://twitter.com/SammyIs_Me">Twitter under @SammyIs_Me</a>. 
-        And you can find what I am doing in my <a href="https://github.com/SammyIsra">Github</a>.
+        Also, you can find what I am doing in my <a href="https://github.com/SammyIsra">GitHub</a>.
       </BioBody>
     </Bio>
   );
