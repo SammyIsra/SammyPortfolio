@@ -95,7 +95,8 @@ function DeveloperPost({title, description, type, location}) {
       style={{ 
         textDecoration: "none", 
         color: "inherit",
-        backgroundImage: "inherit" }}>
+        backgroundImage: "inherit",
+        marginBottom: "1.5rem" }}>
       <PostContainer>
         <PostTitle>{title}</PostTitle>&nbsp;
         <PostType>{type}</PostType>
@@ -160,7 +161,6 @@ const BioBody = styled.p`
 `;
 
 const PostContainer = styled.div`
-  margin-bottom: 1rem;
   border-left: 0.2rem solid rgba(204, 204, 204, 0);
   padding-left: 0.3rem;
   &:hover {
@@ -168,7 +168,7 @@ const PostContainer = styled.div`
   }
 `;
 
-const PostTitle = styled.h2`
+const PostTitle = styled.h3`
   display: inline;
   line-height: 1.80rem;
   font-size: 1.80rem;
@@ -211,13 +211,14 @@ const ExperiencesContainer = styled.div`
   }
 `;
 
-const ExperiencesTitle = styled.h3`
-  font-size: 1.3rem;
-  line-height: 1.3rem;
+const ExperiencesTitle = styled.h2`
+  font-size: 1.95rem;
+  line-height: 1.95rem;
   margin-bottom: 1.3rem;
 `;
 
 const FilterItem = styled.div`
+  font-size: 1.25rem;
   color: rgb(115, 115, 115);
   opacity: ${ ({active}) => (active)? "1" : "0.5" };
   cursor: pointer;   
