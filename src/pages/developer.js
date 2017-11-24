@@ -12,10 +12,34 @@ const DeveloperPage = ({data}) => {
   return (
     <div>
       <Header light/>
+      <DeveloperBio />
       <Experiences posts={posts} />
     </div>
   );
 };
+
+function DeveloperBio(){
+
+  const title = "Sammy is a... Developer";
+  const bio = "A software developer mainly focused on Web development. "
+    + "Open web and education advocate, I believe in the web as one of the biggest "
+    + "gatekeeper beaters out there. Some of my favorite toys are "
+    + "JavaScript (and TypeScript), C#, Meteor, React, Redux, Angular, Git, .Net and RxJS. "
+    + "Other than those, have experience playing with " 
+    + "C, Java, Python and Ruby. I am also exploring web animations "
+    + "w/ SVGs, functional and reactive programming paradigms, and Machine Learning!";
+
+  return (
+    <Bio>
+      <BioTitle>{title}</BioTitle>
+      <BioBody>
+        {bio}<br />
+        I also write sometimes in <a href="https://dev.to/sammyisa">Dev.to</a> and ramble on <a href="https://twitter.com/SammyIs_Me">Twitter under @SammyIs_Me</a>. 
+        And you can find what I am doing in my <a href="https://github.com/SammyIsra">Github</a>.
+      </BioBody>
+    </Bio>
+  );
+}
 
 class Experiences extends React.Component{
 
@@ -118,6 +142,22 @@ class PostsFilter extends React.Component {
     );
   }
 }
+
+const Bio = styled.div`
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+const BioTitle = styled.h2`
+  font-size: 3rem;
+  line-height: 3rem;
+`;
+
+const BioBody = styled.p`
+  font-size: 1.40rem;
+  line-height: 1.75rem;
+`;
 
 const PostContainer = styled.div`
   margin-bottom: 1rem;
