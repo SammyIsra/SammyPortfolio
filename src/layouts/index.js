@@ -68,6 +68,7 @@ const Footer = ({dark}) =>
       <FooterIconItem><a href="https://www.linkedin.com/in/sammyisrawi/">LinkedIn</a></FooterIconItem>
       <FooterIconItem><a href="https://dev.to/sammyisa">Dev.to</a></FooterIconItem>
       <FooterIconItem><a href="https://github.com/SammyIsra">Github</a></FooterIconItem>
+      <FooterIconItem><a href="https://drive.google.com/file/d/0B1ouby1hW-sjSDdZSFYtUFB1TVE/view?usp=sharing">Resume</a></FooterIconItem>
     </FooterIconsContainer>
   </FooterContainer>;
   
