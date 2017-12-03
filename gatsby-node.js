@@ -3,7 +3,7 @@ const {createFilePath} = require("gatsby-source-filesystem");
 const path = require("path");
 
 
-const urlAllPhotos = "http://sammyphotoapi-dev.us-east-1.elasticbeanstalk.com/api/photos?sortBy=date&limitTo=40";
+const urlAllPhotos = "https://sammy-photos.herokuapp.com/api/photos?sortBy=date&limitTo=40";
 
 exports.sourceNodes = function({boundActionCreators}){
   
