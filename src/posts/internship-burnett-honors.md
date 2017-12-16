@@ -11,3 +11,13 @@ location: "Orlando, FL"
 current: false
 published: false
 ---
+
+## What I did
+
+Developed, maintained, and improved various services of the Burnett Honors College website and services.
+
+Acted as a project lead for a solution that improved student accessibility to services offered by the college.
+
+## What we used 
+
+C#, .NET MVC 5 Framework, Visual Studio, Telerik, and associated technologies.
