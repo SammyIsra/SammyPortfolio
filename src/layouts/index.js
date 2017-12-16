@@ -61,7 +61,7 @@ const FooterContainer = styled.div`
 
 const Footer = ({dark}) => 
   <FooterContainer dark={dark}>
-    Made proudly by Sammy: Finding your lack of sense of pride and accomplisment, disturbing.
+    Made proudly by Sammy: Finding your lack of sense of pride and accomplishment, disturbing.
     <FooterIconsContainer>
       <FooterIconItem><a href="https://twitter.com/SammyIs_Me">Twitter</a></FooterIconItem>      
       <FooterIconItem><a href="https://www.flickr.com/photos/sammy_iy/">Flickr</a></FooterIconItem>
