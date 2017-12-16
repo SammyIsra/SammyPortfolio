@@ -3,6 +3,7 @@ title: Automatic Versions
 published: true
 type: project
 date: "2017-11-21"
+description: Visual Studio plugin that helps you keep you program's version updated, built by Precision Infinity.
 link: https://marketplace.visualstudio.com/items?itemName=PrecisionInfinity.AutomaticVersions
 ---
 ## What it is
