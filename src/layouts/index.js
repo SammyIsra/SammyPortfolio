@@ -24,41 +24,6 @@ const FooterContainer = styled.div`
   padding: 1.5rem;
 `;
 
-// const Header = () => (
-//   <div
-//     style={{
-//       background: "rebeccapurple",
-//       marginBottom: "1.45rem",
-//     }}
-//   >
-//     <div
-//       style={{
-//         margin: "0 auto",
-//         maxWidth: 960,
-//         padding: "1.45rem 1.0875rem",
-//       }}
-//     >
-//       <h1 style={{ margin: 0 }}>
-//         <Link
-//           to="/"
-//           style={{
-//             color: "white",
-//             textDecoration: "none",
-//           }}
-//         >
-//           Gatsby
-//         </Link>
-//       </h1>
-//     </div>
-//   </div>
-// );
-
-
-// SAMMY:
-//  Implement dark theme in footer
-//  Maybe also take in "accent color" as props?
-//  Or always use one color? Like WesBos yellow?
-
 const Footer = ({dark}) => 
   <FooterContainer dark={dark}>
     Made proudly by Sammy: Finding your lack of sense of pride and accomplishment, disturbing.
