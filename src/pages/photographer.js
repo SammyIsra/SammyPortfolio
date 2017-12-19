@@ -50,7 +50,7 @@ const PhotoStreamContainer = styled.div`
   }
 `;
 
-const PhotoItem = styled.img`
+const PhotoItemStyled = styled.img`
   max-width: 100%;
   width: 100%;
   opacity: 1;
@@ -87,10 +87,27 @@ function PhotoStream({photos}){
     <PhotoStreamContainer>
       { photos.map(x => 
         <PhotoItem 
-          key={x.title} 
+          key={x.id}
+          id={x.id} 
           src={x.url_m} 
-          alt={x.title} />)}
+          address={x.address}
+          title={x.title} />
+      )}
     </PhotoStreamContainer>
+  );
+}
+
+function PhotoItem({id, src, address, title}){
+  
+  //const linkToOriginal = `https://www.flickr.com/photos/${owner}/${id}/`;
+  return (
+    <a 
+      href={address} 
+      target="_blank">
+      <PhotoItemStyled 
+        src={src} 
+        alt={title} />
+    </a>
   );
 }
 
@@ -100,6 +117,8 @@ export const query = graphql`
     allFlickrImage {
       edges{
         node {
+          id
+          address
           title
           url_m
           height_m

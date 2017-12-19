@@ -28,6 +28,7 @@ exports.sourceNodes = function({boundActionCreators}){
 function processFlickrImageList(flickrItem){
   return {
     ...flickrItem,
+    address: `https://www.flickr.com/photos/${flickrItem.owner}/${flickrItem.id}/`,
     children: [],
     //fields: flickrItem,
     parent: null,
