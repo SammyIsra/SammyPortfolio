@@ -56,10 +56,13 @@ const Subtitle = styled.div`
   color: ${ props => props.dark ? "white" : "black"};
 `;
 
-const SubtitleItem = styled.span`
+const SubtitleItemStyled = styled.span`
   color: inherit;
   text-decoration: inherit;
   background-image: none;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ArrowDown = styled.div`
@@ -70,6 +73,16 @@ const ArrowDown = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
+
+function SubtitleItem({to, children}){
+  return (
+    <SubtitleItemStyled>
+      <Link to={to}>
+        {children}
+      </Link>
+    </SubtitleItemStyled>
+  );
+}
 
 export default function Header({dark, useImage, page}){
 
@@ -95,6 +108,7 @@ export default function Header({dark, useImage, page}){
     home: []
   };
 
+  //Get image if one has been requested. Else, return undefined.
   function getImage(){
     if(useImage)
       return bgImages[page][Math.floor(Math.random()*bgImages[page].length)];
@@ -109,13 +123,13 @@ export default function Header({dark, useImage, page}){
           <Title dark={dark}>Sammy Israwi</Title>
         </Link>
         <Subtitle dark={dark}>
-          <Link to='/developer'>
-            DEVELOPER
-          </Link>
-          &nbsp;|&nbsp; 
-          <Link to='/photographer'>
-            PHOTOGRAPHER
-          </Link>
+          <SubtitleItem to='/developer'>
+            DEVELOPER&nbsp;
+          </SubtitleItem>
+          | 
+          <SubtitleItem to='/photographer'>
+            &nbsp;PHOTOGRAPHER
+          </SubtitleItem>
         </Subtitle>
         <ArrowDown dark={dark}>V</ArrowDown>
       </HeaderMask>
