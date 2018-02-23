@@ -9,15 +9,18 @@ function BlogPost({data}) {
   return (
     <PostContainer>
       <SmallHeader />
-      { post.frontmatter.type == "work" 
-        ?<WorkSubHeader 
+
+      { post.frontmatter.type === "work" &&
+        <WorkSubHeader 
           employer={post.frontmatter.employer}
           position={post.frontmatter.position}
           from={post.frontmatter.from}
           to={post.frontmatter.to}
           current={post.frontmatter.current}
-          location={post.frontmatter.location} />
-        : <PostTitle>{post.frontmatter.title}</PostTitle>}
+          location={post.frontmatter.location} /> }
+      
+      { post.frontmatter.type === "media" && <MediaSubHeader metadata={post.frontmatter} />}
+
       <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
     </PostContainer>
   );
@@ -33,6 +36,19 @@ function WorkSubHeader({employer, position, from, to, current, location}){
       <Where> | {location}</Where>
       <From>{fromDate}</From>
       { current? <Current /> : <To>{toDate}</To> }
+      
+    </div>
+  );
+}
+
+function MediaSubHeader({metadata}){
+  const {link, platform, title, date} = metadata;
+  const fromDate = moment(date).format("MMMM YYYY");
+  return (
+    <div>
+      <What>{title}</What>
+      <From>{fromDate}</From>
+      <a href={link}>Link to {platform}</a>
     </div>
   );
 }
@@ -127,6 +143,9 @@ export const query = graphql`
         employer
         position
         current
+        type
+        link
+        platform
       }
     }
   }
