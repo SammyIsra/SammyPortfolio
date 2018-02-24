@@ -10,8 +10,10 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   ${ props => props.image 
-    ? "background-image: url('"+ props.image.large +"');"
+    ? "background-image: url('https://c1.staticflickr.com/5/4422/36355888342_19e1636a12.jpg');"
     : ""}
 `;
   // background-image: ${props => `url("${props.image})` || "none"};
