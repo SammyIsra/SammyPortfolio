@@ -13,8 +13,8 @@ const HeaderContainer = styled.header`
   background-repeat: no-repeat;
   background-size: cover;
   ${ props => props.image 
-    ? "background-image: url('https://c1.staticflickr.com/5/4422/36355888342_19e1636a12.jpg');"
-    : ""}
+    ? "background-image: url('" + props.image.large + "');"
+    : null}
 `;
   // background-image: ${props => `url("${props.image})` || "none"};
 
