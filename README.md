@@ -1,13 +1,10 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Sammy's Portfolio
+### Stuff to remember:
+Production website is deployed to
+`sammyis.me`.
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Website is rebuilt and redeployed every time there's a commit to `master` using Netlify (I <3 Netlify).
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+Demo is deployed to `sammyis-gdemo.surge.sh` manually, via the NPM script `npm run demploy:demo`. Demo website is hosted in Surge (without any forced HTTPS, btw).
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Website is built on GatsbyJS
