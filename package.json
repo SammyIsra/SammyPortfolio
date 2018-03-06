@@ -1,8 +1,12 @@
 {
   "name": "sammy-website",
   "description": "Sammy's website",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Sammy Israwi <sammy.israwi@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SammyIsra/SammyPortfolio"
+  },
   "dependencies": {
     "axios": "0.17.1",
     "gatsby": "^1.9.110",
@@ -12,7 +16,7 @@
     "gatsby-plugin-typography": "1.7.10",
     "gatsby-source-filesystem": "1.5.8",
     "gatsby-transformer-remark": "1.7.21",
-    "moment": "2.19.2",
+    "moment": "2.21.0",
     "styled-components": "2.2.3",
     "typography-theme-fairy-gates": "0.15.11"
   },
