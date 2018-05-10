@@ -8,23 +8,6 @@ import Header from "../components/Header";
 import {Footer} from "../components/Footer";
 //import "./index.css";
 
-const FooterIconsContainer = styled.footer`
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  align-items: center;
-`;
-
-const FooterIconItem = styled.div`
-  margin-left: 1rem;
-`;
-
-const FooterContainer = styled.div`
-  background-color: ${props => props.dark ? "rgb(51,51,51)" : "white" };
-  color: ${props => props.dark? "white" : "inherit"};
-  padding: 1.5rem;
-`;
-
 const Website = styled.div`
   display: flex;
   flex-flow: column;
