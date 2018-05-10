@@ -24,6 +24,16 @@ const FooterContainer = styled.div`
   padding: 1.5rem;
 `;
 
+const Website = styled.div`
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+`;
+
+const WebsiteContent = styled.div`
+  flex: 1;
+`;
+
 const Footer = ({dark}) => 
   <FooterContainer dark={dark}>
     Made proudly by Sammy: Finding your lack of sense of pride and accomplishment, disturbing.
@@ -68,7 +78,7 @@ class TemplateWrapper extends React.Component {
     } = this.props;
 
     return (
-      <div>
+      <Website>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -76,9 +86,11 @@ class TemplateWrapper extends React.Component {
             { name: "keywords", content: data.site.siteMetadata.tags.join(", ") },
           ]}
         />
-        {children()}
+        <WebsiteContent>
+          {children()}
+        </WebsiteContent>
         <Footer dark={this.state.useDarkTheme} />
-      </div>
+      </Website>
     );
   }
 }
