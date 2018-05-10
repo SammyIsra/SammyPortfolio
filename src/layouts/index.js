@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import styled from "styled-components";
 
 import Header from "../components/Header";
+import {Footer} from "../components/Footer";
 //import "./index.css";
 
 const FooterIconsContainer = styled.footer`
@@ -64,7 +65,7 @@ class TemplateWrapper extends React.Component {
     if(path === "/photographer"){
       this.setState({useDarkTheme: true});
     } else if(path === "/developer") {
-      this.setState({useDarkTheme: false});      
+      this.setState({useDarkTheme: false});
     } else {
       this.setState({useDarkTheme: false});
     }

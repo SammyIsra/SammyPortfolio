@@ -10,9 +10,11 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   ${ props => props.image 
-    ? "background-image: url('"+ props.image.large +"');"
-    : ""}
+    ? "background-image: url('" + props.image.large + "');"
+    : null}
 `;
   // background-image: ${props => `url("${props.image})` || "none"};
 

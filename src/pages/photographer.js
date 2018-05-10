@@ -62,6 +62,10 @@ const PhotoItemStyled = styled.img`
   }
 `;
 
+const PhotoLink = styled.a`
+  background-image: none;
+`;
+
 const Bio = styled.div`
   width: 75%;
   text-align: center;
@@ -97,17 +101,17 @@ function PhotoStream({photos}){
   );
 }
 
-function PhotoItem({id, src, address, title}){
+function PhotoItem({src, address, title}){
   
   //const linkToOriginal = `https://www.flickr.com/photos/${owner}/${id}/`;
   return (
-    <a 
+    <PhotoLink 
       href={address} 
       target="_blank">
       <PhotoItemStyled 
         src={src} 
         alt={title} />
-    </a>
+    </PhotoLink>
   );
 }
 
