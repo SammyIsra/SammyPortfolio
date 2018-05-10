@@ -3,7 +3,7 @@ import styled from "styled-components";
 import GLink from "gatsby-link";
 
 
-function SmallHeader(props) {
+function SmallHeader() {
   return (
     <HeaderContainer className="SmallHeader">
       <HeaderTitle>

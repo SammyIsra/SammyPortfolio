@@ -8,6 +8,16 @@ import Header from "../components/Header";
 import {Footer} from "../components/Footer";
 //import "./index.css";
 
+const Website = styled.div`
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+`;
+
+const WebsiteContent = styled.div`
+  flex: 1;
+`;
+
 class TemplateWrapper extends React.Component {
   
   componentWillMount(){
@@ -38,7 +48,7 @@ class TemplateWrapper extends React.Component {
     } = this.props;
 
     return (
-      <div>
+      <Website>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -46,9 +56,11 @@ class TemplateWrapper extends React.Component {
             { name: "keywords", content: data.site.siteMetadata.tags.join(", ") },
           ]}
         />
-        {children()}
+        <WebsiteContent>
+          {children()}
+        </WebsiteContent>
         <Footer dark={this.state.useDarkTheme} />
-      </div>
+      </Website>
     );
   }
 }
