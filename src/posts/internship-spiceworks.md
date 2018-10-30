@@ -14,7 +14,7 @@ published: true
 
 ## What it is
 
-My internship at Spiceworks was my first experience in the tech industry, and it was easily the most influential experience in my University career. In Spiceworks I had my first mentor figure, [Alex Wykoff](https://twitter.com/alex_wykoff?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) (Hi Alex!). Alex taught me the first things I learned about the development cycle, Meteor, QA, and User Experience. Also the importance of presentation and public speaking. 
+My internship at Spiceworks was my first experience in the tech industry, and it was easily the most influential experience in my University career. In Spiceworks I had my first mentor figure, [Alex Wykoff](https://twitter.com/alex_wykoff) (Hi Alex!). Alex taught me the first things I learned about the development cycle, Meteor, QA, and User Experience. Also the importance of presentation and public speaking. 
 
 ## What I did
 
