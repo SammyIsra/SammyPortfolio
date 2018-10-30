@@ -5,7 +5,7 @@ employer: Deloitte Consulting, LLC
 position: Solution Analyst
 description: Solution Analyst for Deloitte, where I worked on Angular web applications.
 from: "2018-02-05"
-date: "2018-02-05"
+date: "2018-10-30"
 location: "Orlando, FL"
 current: true
 published: true
